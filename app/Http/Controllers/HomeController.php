@@ -11,11 +11,16 @@ class HomeController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $this->middleware('verified', ['only' => ['edit']]);
     }
 
-
-    public function index(): View
+    public function edit(): View
     {
-        return view('home');
+        return view('home.edit');
+    }
+
+    public function home(): View
+    {
+        return view('home.home');
     }
 }
