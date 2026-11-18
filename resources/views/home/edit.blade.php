@@ -7,7 +7,7 @@
                 <div class="card">
                     <div class="card-header">Editar tus datos</div>
                     <div class="card-body">
-                        <form action="" method="post">
+                        <form action="{{ route('home.update') }}" method="post">
                             @method('put')
                             @csrf
 
